@@ -1,0 +1,149 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  * {
+    font-family: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .quicksand {
+    font-family: 'Quicksand', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+
+  .nunito {
+    font-family: 'Nunito', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  body {
+    @apply p-0 m-0 h-screen antialiased;
+    background: var(--bg);
+    color: var(--theme-text-color)
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-button {
+    @apply w-0 h-0;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full border-none;
+    background: var(--button);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    // @apply bg-white;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    // @apply bg-black;
+  }
+  ::-webkit-scrollbar-track {
+    @apply rounded-full border-none;
+    background: var(--theme-color-secondary);
+  }
+  ::-webkit-scrollbar-track:hover {
+    background: var(--theme-color-secondary);
+  }
+  ::-webkit-scrollbar-track:active {
+    // @apply bg-gray-700;
+  }
+  ::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+  }
+}
+
+@layer components {
+  .theme-color {
+    background: var(--theme-color);
+    color: var(--theme-text-color);
+  }
+
+  .container {
+    @apply p-4 mx-auto mt-10 w-1/4 rounded-md border-none shadow-lg theme-color;
+  }
+  
+  .icon-button {
+    @apply p-2 rounded-md cursor-pointer hover:button;
+  }
+
+  .feature {
+    @apply z-0 mt-2 flex flex-row gap-2;
+
+    .feature-label {
+      @apply mb-1 text-sm font-bold uppercase;
+      color: var(--text-color-dimmed);
+    }
+  }
+
+  .dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    transform: translate(0) scale(1);
+    visibility: visible;
+  }
+
+  .nav-icon {
+    @apply inline justify-center cursor-pointer hover:rounded-md;
+
+    #language-group {
+      @apply absolute z-50 w-48 rounded-md shadow-md dark:border-transparent theme-color;
+
+      .item {
+        @apply flex z-50 flex-row py-2 px-2 w-full text-xs rounded-md cursor-pointer mb-1;
+
+        &:hover {      
+          @apply text-white;
+          background: var(--button);
+          border-color: var(--button);
+        }
+      }
+    }
+  }
+
+  .profile-dropdown {
+    @apply flex invisible z-20 flex-col opacity-0 transition-all duration-300 transform origin-top-right scale-95;
+
+    .toggler {
+      @apply absolute left-0 z-20 rounded-md shadow-lg origin-top-right outline-none theme-color;
+    }
+  }
+
+  .button {
+    background: var(--button);
+    border-color: var(--button-border);
+    color: var(--button-text);
+
+    &:hover {
+      background: var(--button-hover);
+    }
+  }
+
+  .b-button {
+    @apply flex flex-row justify-center py-2 px-3 rounded shadow-none transition-all duration-200 ease-in-out cursor-pointer hover:shadow-md;
+  }
+
+  .primary-button {
+    @apply b-button button;
+  }
+
+  .href {
+    color: var(--read-more-color);
+    @apply cursor-pointer;
+
+    &:hover {
+      @apply font-bold text-blue-500 underline;
+    }
+  }
+}
+
+@layer utilities {}
