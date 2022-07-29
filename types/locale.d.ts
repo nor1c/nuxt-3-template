@@ -1,1 +1,0 @@
-declare type TLocale = 'en' | 'id' | 'jp'

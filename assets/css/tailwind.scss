@@ -137,7 +137,7 @@
   }
 
   .href {
-    color: var(--read-more-color);
+    color: var(--href-text-color);
     @apply cursor-pointer;
 
     &:hover {

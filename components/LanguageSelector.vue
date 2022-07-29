@@ -32,14 +32,6 @@
 <script setup lang="ts">
   import { availableLanguages } from '~/utils/locales/availableLanguages'
   import useLocale from '~/stores/locale'
-  import {
-    Listbox,
-    ListboxLabel,
-    ListboxButton,
-    ListboxOptions,
-    ListboxOption,
-  } from '@headlessui/vue'
-  import { CheckIcon, SelectorIcon } from '@heroicons/vue/solid'
   
   const localeStore = useLocale()
   const selectedLanguage = computed(() => localeStore.locale)

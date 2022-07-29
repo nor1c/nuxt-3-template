@@ -1,7 +1,6 @@
 import { defineNuxtConfig } from 'nuxt'
 import presetIcons from '@unocss/preset-icons'
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   css: [
     '~/assets/css/main.css'
@@ -30,12 +29,13 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Poppins: true,
-      Quicksand: true,
-      Nunito: true,
-      Inter: true,
-      Rubik: true,
-      Lato: true,
-      'Readex Pro': true
+      // Quicksand: true,
+      // Nunito: true,
+      // Inter: true,
+      // Rubik: true,
+      // Lato: true,
+      // 'Readex Pro': true
+      /** add more font here */
     },
     display: 'swap',
     prefetch: true,
