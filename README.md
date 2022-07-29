@@ -3,7 +3,7 @@
 #### Things added
 - TailwindCSS ([@nuxtjs/tailwindcss](https://tailwindcss.nuxtjs.org/))
 - Pinia ([@pinia/nuxt](https://pinia.vuejs.org/ssr/nuxt.html))
-- Pinia persistance ([pinia-plugin-persistedstate](https://github.com/prazdevs/pinia-plugin-persistedstate))
+- Pinia persistent ([pinia-plugin-persistedstate](https://github.com/prazdevs/pinia-plugin-persistedstate))
 - I18n ([@intlify/nuxt3](https://github.com/intlify/nuxt3))
 - Dark Mode ([@nuxtjs/color-mode](https://color-mode.nuxtjs.org/))
 - Google Fonts ([@nuxtjs/google-fonts](https://google-fonts.nuxtjs.org/))
